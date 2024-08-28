@@ -107,6 +107,8 @@ const LocationFinder = () => {
           value={inputLongitude}
           onChangeText={setInputLongitude}
         />
+      </View>
+      <View style={styles.buttonContainer}>
         <Button
           title="Validate Location"
           onPress={validateCoordinates}
@@ -144,10 +146,10 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     alignItems: "center",
     backgroundColor: "#f5f5f5",
-    padding: 20,
+    padding: 15,
   },
   header: {
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: "bold",
     marginBottom: 20,
     color: "#333",
@@ -157,7 +159,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
-    marginBottom: 20,
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginBottom: 5,
   },
   input: {
     height: 40,
@@ -165,23 +169,23 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     margin: 5,
+    padding: 5,
     width: "45%",
-    paddingHorizontal: 10,
     backgroundColor: "#fff",
+  },
+  buttonContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    width: "100%",
+    marginBottom: 20,
   },
   button: {
     height: 40,
     borderRadius: 5,
     backgroundColor: "#007bff",
-    justifyContent: "center",
-    alignItems: "center",
+    color: "#fff",
     width: "100%",
     marginBottom: 20,
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 16,
-    fontWeight: "bold",
   },
   qrContainer: {
     flexDirection: "row",
@@ -191,7 +195,7 @@ const styles = StyleSheet.create({
   },
   qrWrapper: {
     alignItems: "center",
-    margin: 15,
+    margin: 10,
     backgroundColor: "#fff",
     borderRadius: 10,
     padding: 10,
@@ -200,6 +204,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 5,
     elevation: 5,
+    width: "45%", // Ensures QR codes fit well on smaller screens
   },
   locationInfo: {
     alignItems: "center",

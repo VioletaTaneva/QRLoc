@@ -23,7 +23,7 @@ const badQRLinks = [
 
 const ContinentFinder = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
-  const [numberOfQRCodes, setNumberOfQRCodes] = useState(3); // Default number of QR codes
+  const [numberOfQRCodes, setNumberOfQRCodes] = useState(4); // Default number of QR codes
 
   const shuffleArray = (array) => {
     let currentIndex = array.length, randomIndex;
@@ -86,24 +86,22 @@ const ContinentFinder = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    width: '100%',
-    backgroundColor: '#add8e6',
+    flexGrow: 1,
     alignItems: 'center',
-    justifyContent: 'center',
-    padding: 15,
-    borderRadius: 15,
+    backgroundColor: '#add8e6',
+    padding: 10,
   },
   header: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginVertical: 15,
     textAlign: 'center',
+    color: '#333',
   },
   buttonContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     marginBottom: 20,
   },
   buttonWrapper: {
@@ -118,6 +116,11 @@ const styles = StyleSheet.create({
   qrWrapper: {
     alignItems: 'center',
     margin: 10,
+    width: '30%', 
+    maxWidth: 120,
+  },
+  button: {
+    width: '100%',
   },
 });
 
