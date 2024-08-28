@@ -8,7 +8,8 @@ export default function PickYourImage() {
 
   useEffect(() => {
     (async () => {
-      const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+      const { status } =
+        await ImagePicker.requestMediaLibraryPermissionsAsync();
       setHasGalleryPermission(status === "granted");
     })();
   }, []);
@@ -50,6 +51,7 @@ export default function PickYourImage() {
           title="Pick Image"
           onPress={pickImage}
           color="#007bff"
+          style={styles.button}
         />
       </View>
     </View>
@@ -64,6 +66,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 5,
     marginHorizontal: 5,
+    width: "100%",
   },
   textContainer: {
     flex: 1,
